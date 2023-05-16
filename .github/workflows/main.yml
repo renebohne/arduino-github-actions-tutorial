@@ -1,5 +1,5 @@
 
-name: test
+name: build and release for Arduino UNO
 
 on: [workflow_dispatch]
 
