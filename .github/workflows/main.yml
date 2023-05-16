@@ -24,4 +24,11 @@ jobs:
           arduino-cli lib install --git-url https://github.com/schinken/SimpleTimer.git
 
       - name: Compile Sketch
-        run: arduino-cli compile --fqbn arduino:avr:uno ./HalloDinge
+        run: arduino-cli compile --fqbn arduino:avr:uno -e ./HalloDinge
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./build/*"
+          tag: v0.1.${{ github.run_number }}
+          token: ${{ secrets.TOKEN }}
