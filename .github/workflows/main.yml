@@ -29,6 +29,6 @@ jobs:
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "./build/*"
+          artifacts: "build/arduino.avr.uno/*"
           tag: v0.1.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
