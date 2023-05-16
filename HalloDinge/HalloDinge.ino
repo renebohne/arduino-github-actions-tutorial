@@ -17,7 +17,7 @@ void setup()
     timer.setInterval(1, repeatMe);
 
     delay(1000);
-    morse.send("DIGITALE DINGE");
+    morse.send("DISCORD PUNKT DIGITALE DINGE ");
 }
 
 void loop()
